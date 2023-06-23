@@ -35,7 +35,8 @@ public class RNTotpModule extends ReactContextBaseJavaModule {
     String code = TotpUtil.generateOTP(
             config.getString("base32String"),
             config.hasKey("digits") ? config.getInt("digits") : defaultDigits,
-            config.hasKey("period") ? config.getInt("period") : defaultPeriod
+            config.hasKey("period") ? config.getInt("period") * 1000 : defaultPeriod * 1000
+
     );
 
     if (null != callback) callback.invoke(code);

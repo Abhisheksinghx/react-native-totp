@@ -23,7 +23,7 @@ RCT_EXPORT_METHOD(generateOTP:(NSDictionary *)config callback:(RCTResponseSender
     TOTPGenerator *generator = [[TOTPGenerator alloc] initWithSecret:secretData
                                                            algorithm:kOTPGeneratorSHA1Algorithm
                                                               digits:[config[@"digits"] integerValue] ? [config[@"digits"] integerValue] : defaultDigits
-                                                              period: [config[@"period"] doubleValue] ? [config[@"period"] doubleValue] : defaultPeriod
+                                                              period: [config[@"period"] doubleValue] ?: defaultPeriod
                                 ];
     NSString *str = [generator generateOTP];
     while (str.length < 6) {
