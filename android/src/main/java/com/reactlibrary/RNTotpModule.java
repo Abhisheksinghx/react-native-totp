@@ -12,7 +12,7 @@ public class RNTotpModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public final static long defaultPeriod = 60;  // 有效时间, 秒
+  public final static long defaultPeriod = 30;  // 有效时间, 秒
   public final static int defaultDigits = 6;    // 位数
 
   public RNTotpModule(ReactApplicationContext reactContext) {

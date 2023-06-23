@@ -4,7 +4,7 @@
 #import "MF_Base32Additions.h"
 
 static NSUInteger defaultDigits = 6;   // 默认位数
-static NSTimeInterval defaultPeriod = 60;  // 默认有效时间, 秒
+static NSTimeInterval defaultPeriod = 30;  // 默认有效时间, 秒
 
 @implementation RNTotp
 
